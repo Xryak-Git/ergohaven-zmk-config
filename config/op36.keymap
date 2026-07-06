@@ -350,10 +350,10 @@
 
         symbols {
             bindings = <
-  &trans     &trans    &trans     &trans     &trans                    &trans  &trans  &trans  &trans  &trans
-  &kp GRAVE  &kp NUBS  &kp MINUS  &kp EQUAL  &trans                    &trans  &trans  &trans  &trans  &trans
-  &trans     &trans    &trans     &trans     &trans                    &trans  &trans  &trans  &trans  &trans
-                                  &trans     &mo 3   &trans    &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans     &trans                &trans
+  &trans  &trans  &trans  &trans  &trans                    &trans  &kp MINUS  &kp EQUAL  &kp NON_US_BACKSLASH  &kp GRAVE
+  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans     &trans                &trans
+                          &trans  &trans  &trans    &trans  &mo 3   &trans
             >;
         };
     };
