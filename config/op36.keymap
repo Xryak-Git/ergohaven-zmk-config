@@ -55,6 +55,42 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        maskedHome: maskedHome {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp HOME>, <&kp HOME>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        maskedEnd: maskedEnd {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp END>, <&kp END>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        mtHome: mtHome {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <220>;
+            bindings = <&maskedHome>, <&kp>;
+
+            hold-trigger-key-positions = <0>;
+        };
+
+        mtEnd: mtEnd {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <220>;
+            bindings = <&maskedEnd>, <&kp>;
+
+            hold-trigger-key-positions = <0>;
+        };
     };
 
     combos {
@@ -245,7 +281,7 @@
         nav {
             bindings = <
   &kp LA(F4)  &trans    &kp LS(LA(TAB))  &kp LA(TAB)  &trans                    &kp PG_UP            &mt LC(BSPC) BSPC       &kp INS          &mt LC(DEL) DEL  &kp PSCRN
-  &sk LGUI    &sk LALT  &sk LCTRL        &sk LSHFT    &trans                    &mt HOME LEFT_ARROW  &mt LC(END) DOWN_ARROW  &mt LC(HOME) UP  &mt END RIGHT    &kp ENTER
+  &sk LGUI    &sk LALT  &sk LCTRL        &sk LSHFT    &trans                    &mtHome 0 LEFT_ARROW  &mt LC(END) DOWN_ARROW  &mt LC(HOME) UP  &mtEnd 0 RIGHT    &kp ENTER
   &trans      &trans    &trans           &trans       &trans                    &kp PG_DN            &kp TAB                 &trans           &trans           &trans
                                          &trans       &trans  &trans    &trans  &mo 3                &trans
             >;
