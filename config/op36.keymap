@@ -287,10 +287,10 @@
 
         base {
             bindings = <
-  &kp Q        &kp W        &kp E         &kp R              &kp T                          &kp Y  &kp U               &kp I                 &kp O        &kp P
-  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LEFT_SHIFT F  &kp G                          &kp H  &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr LALT L  &hmr RGUI SEMICOLON
-  &kp Z        &kp X        &kp C         &kp V              &kp B                          &kp N  &kp M               &kp COMMA             &kp DOT      &kp SLASH
-                                          &lt 1 ESC          &mo 1  &kp SPACE    &kp ENTER  &mo 2  &backspaceToDelete
+  &kp Q        &kp W        &kp E         &kp R              &kp T                               &kp Y  &kp U               &kp I                 &kp O        &kp P
+  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LEFT_SHIFT F  &kp G                               &kp H  &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr LALT L  &hmr RGUI SEMICOLON
+  &kp Z        &kp X        &kp C         &kp V              &kp B                               &kp N  &kp M               &kp COMMA             &kp DOT      &kp SLASH
+                                          &lt 1 ESC          &lt 1 CAPS  &kp SPACE    &kp ENTER  &mo 2  &backspaceToDelete
             >;
 
             display-name = "Base";
@@ -298,10 +298,10 @@
 
         nav {
             bindings = <
-  &kp LA(F4)  &trans    &kp LS(TAB)      &swapper     &trans                    &kp PG_UP             &mt LC(BSPC) BSPC       &kp INS          &mt LC(DEL) DEL  &kp PSCRN
-  &sk LGUI    &sk LALT  &sk LCTRL        &sk LSHFT    &trans                    &mtHome 0 LEFT_ARROW  &mt LC(END) DOWN_ARROW  &mt LC(HOME) UP  &mtEnd 0 RIGHT   &kp ENTER
-  &trans      &trans    &trans           &trans       &trans                    &kp PG_DN             &kp TAB                 &trans           &trans           &trans
-                                         &trans       &trans  &trans    &trans  &mo 3                 &trans
+  &kp LA(F4)  &trans    &kp LS(TAB)  &swapper   &trans                    &kp PG_UP             &mt LC(BSPC) BSPC       &kp INS          &mt LC(DEL) DEL  &kp PSCRN
+  &sk LGUI    &sk LALT  &sk LCTRL    &sk LSHFT  &trans                    &mtHome 0 LEFT_ARROW  &mt LC(END) DOWN_ARROW  &mt LC(HOME) UP  &mtEnd 0 RIGHT   &kp ENTER
+  &trans      &trans    &trans       &trans     &trans                    &kp PG_DN             &kp TAB                 &trans           &trans           &trans
+                                     &trans     &trans  &trans    &trans  &mo 3                 &trans
             >;
 
             display-name = "Nav";
