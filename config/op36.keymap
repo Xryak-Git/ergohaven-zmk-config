@@ -94,6 +94,16 @@
             hold-trigger-key-positions = <0>;
         };
 
+        langZ: langZ {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <160>;
+            quick-tap-ms = <220>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+        };
+
         swapper: swapper {
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
@@ -298,7 +308,7 @@
             bindings = <
   &kp Q        &kp W        &kp E         &kp R              &kp T                               &kp Y           &kp U               &kp I                 &kp O        &kp P
   &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LEFT_SHIFT F  &kp G                               &kp H           &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr LALT L  &hmr RGUI SEMICOLON
-  &mt CAPS Z   &kp X        &kp C         &kp V              &kp B                               &kp N           &kp M               &kp COMMA             &kp DOT      &kp SLASH
+  &langZ CAPS Z  &kp X        &kp C         &kp V              &kp B                               &kp N           &kp M               &kp COMMA             &kp DOT      &kp SLASH
                                           &lt 1 ESC          &lt 1 CAPS  &kp SPACE    &kp ENTER  &layerTapDance  &backspaceToDelete
             >;
 
