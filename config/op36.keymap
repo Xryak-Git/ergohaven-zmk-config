@@ -350,9 +350,9 @@
 
         symbols {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans     &trans                &trans
-  &trans  &trans  &trans  &trans  &trans                    &trans  &kp MINUS  &kp EQUAL  &kp NON_US_BACKSLASH  &kp GRAVE
-  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &kp SEMI   &trans                &trans
+  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans     &trans    &trans
+  &trans  &trans  &trans  &trans  &trans                    &trans  &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE
+  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &kp SEMI   &trans    &trans
                           &trans  &trans  &trans    &trans  &mo 3   &trans
             >;
         };
