@@ -93,6 +93,15 @@
 
             hold-trigger-key-positions = <0>;
         };
+
+        swapper: swapper {
+            compatible = "zmk,behavior-tri-state";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+
+            ignored-key-positions = <2 15 16 17 18>;
+            ignored-layers = <1>;
+        };
     };
 
     combos {
@@ -268,6 +277,8 @@
         apostrophe {
             bindings = <&kp SQT>;
             key-positions = <18 19>;
+            timeout-ms = <18>;
+            require-prior-idle-ms = <150>;
         };
     };
 
@@ -287,7 +298,7 @@
 
         nav {
             bindings = <
-  &kp LA(F4)  &trans    &kp LS(LA(TAB))  &kp LA(TAB)  &trans                    &kp PG_UP             &mt LC(BSPC) BSPC       &kp INS          &mt LC(DEL) DEL  &kp PSCRN
+  &kp LA(F4)  &trans    &kp LS(TAB)      &swapper     &trans                    &kp PG_UP             &mt LC(BSPC) BSPC       &kp INS          &mt LC(DEL) DEL  &kp PSCRN
   &sk LGUI    &sk LALT  &sk LCTRL        &sk LSHFT    &trans                    &mtHome 0 LEFT_ARROW  &mt LC(END) DOWN_ARROW  &mt LC(HOME) UP  &mtEnd 0 RIGHT   &kp ENTER
   &trans      &trans    &trans           &trans       &trans                    &kp PG_DN             &kp TAB                 &trans           &trans           &trans
                                          &trans       &trans  &trans    &trans  &mo 3                 &trans
